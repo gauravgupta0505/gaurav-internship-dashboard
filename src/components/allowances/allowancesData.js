@@ -72,7 +72,7 @@ const allowancesData = [
         }
     },
     {
-        label:'Family Allowance',
+        label:'Family allowances',
         validation:{
             required:{
                 value:true,

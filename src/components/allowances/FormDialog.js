@@ -1,31 +1,32 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import DialogContent from '@mui/material/DialogContent';
-import DialogTitle from '@mui/material/DialogTitle';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
+import Dialog from '@mui/material/Dialog';
+import DialogContent from '@mui/material/DialogContent';
+import DialogTitle from '@mui/material/DialogTitle';
 import { Stack } from '@mui/system';
-import allowancesData from './allowancesData';
 import { useForm } from 'react-hook-form';
 import { BsAsterisk } from "react-icons/bs";
 import { FormHelperText, Grid } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
+import allowancesData from './allowancesData';
 import { useDispatch, useSelector } from 'react-redux';
 
 export default function FormDialog() {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const dispatch = useDispatch()
-  const state = useSelector(state => state.allowance)
+  const state = useSelector(state => state.allowances)
   const handleClose = () => {
     dispatch({ type: "SHOW_POPUP", payload: false })
   };
 
   function onSubmit(data) {
-    if(data)
-    handleClose();
+    if(data) {
+      handleClose();
+    }
     localStorage.setItem('allowances', JSON.stringify(data))
     dispatch({type:"ALLOWANCE_DATA",payload:data})
   }

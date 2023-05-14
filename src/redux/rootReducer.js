@@ -1,11 +1,11 @@
 import { combineReducers } from "redux";
 
-import allowanceReducer from "./reducer";
-import allowancePopupReducer from "./allowancesReducer"
-import registerDataReducer from "./registerReducer";
+import allowanceReducer from "./allowanceReducer";
+import allowancePopupReducer from "./allowancePopupReducer"
+import registerDataReducer from "./registerDataReducer";
 
 const rootReducer = combineReducers({
-    allowance: allowanceReducer,
+    allowances: allowanceReducer,
     allowancePopup: allowancePopupReducer,
     registerData: registerDataReducer
 })

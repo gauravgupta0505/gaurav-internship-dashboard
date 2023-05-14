@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import FormDialog from './components/allowance/FormDialog'
+import FormDialog from './components/allowances/FormDialog'
 import Form from './components/corporate-registration/Form';
 import NavBar from './components/navbar/NavBar.js';
 import LandingPage from './components/main/LandingPage';
