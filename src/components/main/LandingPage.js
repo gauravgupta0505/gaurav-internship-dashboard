@@ -2,7 +2,7 @@ import { Box } from "@mui/system";
 import "./header.css"
 import Header from "./Header";
 import { useSelector } from "react-redux";
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
+import { Table, TableBody, TableCell, TableContainer, TableRow } from "@mui/material";
 
 function LandingPage() {
     const registerData = useSelector(state=>state.registerData)
