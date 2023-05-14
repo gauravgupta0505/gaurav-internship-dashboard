@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import FormDialog from './components/allowance/FormDialog'
 import Form from './components/corporate-registration/Form';
 import NavBar from './components/navbar/NavBar.js';
-import MainPage from './components/main/MainPage';
+import LandingPage from './components/main/LandingPage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
@@ -18,7 +18,7 @@ function App() {
         <FormDialog/>
         <BrowserRouter>
         <Routes>
-          <Route path='/' element={<MainPage/>}></Route>
+          <Route path='/' element={<LandingPage/>}></Route>
           <Route path='/register' element={<Form/>}></Route>
         </Routes>
         </BrowserRouter>
