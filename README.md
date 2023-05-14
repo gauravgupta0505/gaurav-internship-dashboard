@@ -1,3 +1,10 @@
+# Internship Dashboard by Gaurav
+This app was created in ReactJS for the internship task of The Product Company
+Added Functionality:
+- Fixed the Nav-Bar not taking full height
+- On clicking "Sign Out", the data automatically gets cleared and the session is also Cleared
+- Redux has been used along with ReactJS to manage states globally
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
