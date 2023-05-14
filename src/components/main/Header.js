@@ -1,12 +1,14 @@
 import { Stack } from "@mui/system";
 import { TbMinusVertical } from "react-icons/tb";
-import { BiEditAlt } from "react-icons/bi";
+import BorderColorIcon from '@mui/icons-material/BorderColor';
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 function Header(props) {
     const dispatch = useDispatch()
     const style = {
+        display: "flex",
+        flexDirection: "row",
         justifyContent: "space-between",
         color: "#27187e", alignItems: "center",
         backgroundColor: "#d7d0ff", borderRadius: "4px",
@@ -22,26 +24,26 @@ function Header(props) {
         if (props.link)
             return (
                 <Link to={props.link} textDecor>
-                    <BiEditAlt className="edit" style={{ textDecoration: "none" }} />
+                    <BorderColorIcon fontSize={"small"} className="edit" style={{ textDecoration: "none" }} />
                 </Link>
             )
         else if (props.popup)
             return (
-                <BiEditAlt className="edit" onClick={handleClickOpen} />
+                <BorderColorIcon fontSize={"small"} className="edit" onClick={handleClickOpen} />
             )
-        else return <BiEditAlt className="edit" />
+        else return <BorderColorIcon fontSize={"small"} className="edit" />
     }
 
     return (
-        <Stack direction='row' sx={style}>
-            <Stack direction='row' sx={{ alignItems: "center" }}>
+        <div style={style}>
+            <span style={{display: "flex", flexDirection: "row", alignItems: "center" }} sx={{ }}>
                 <TbMinusVertical className="vline" />
                 {props.title}
-            </Stack>
+            </span>
             {
                 button()
             }
-        </Stack>
+        </div>
 
     )
 }

@@ -6,7 +6,8 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import GridViewIcon from '@mui/icons-material/GridView';
 import LogoutIcon from '@mui/icons-material/Logout';
-import BusinessCenterRoundedIcon from '@mui/icons-material/BusinessCenterRounded';
+import WorkIcon from '@mui/icons-material/Work';
+import AssessmentIcon from '@mui/icons-material/Assessment';
 import { Typography } from '@mui/material';
 import { useDispatch } from 'react-redux';
 
@@ -14,9 +15,10 @@ function NavBar(){
     const drawerWidth = 250;
     const dispatch = useDispatch();
     function menuIcon(value){
-        if(value==='Dashboard' || value==='Reports') return <GridViewIcon/>
+        if(value==='Dashboard') return <GridViewIcon/>
         else if(value==='Sign Out') return <LogoutIcon/>
-        else return <BusinessCenterRoundedIcon/>
+        else if(value === 'Reports') return <AssessmentIcon />
+        else return <WorkIcon />
     }
     return(
         <Drawer
